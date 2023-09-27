@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <!--bootstrap-css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginArea">
+        <div class="container  vh-100 d-flex flex-column text-center justify-content-center align-items-center">
+            <img src="RPS.png" alt="logo" width="500" height="400">
+            <div class="userScore d-flex text-center justify-content-center align-items-center">
+            <input id="playerName" type="text" placeholder="Username">
+            <h4 class="score">Score:</h4>
+            <input id="gameLimit" type="number" placeholder="Games" min="1" value="5">
+        </div>
+        <button class="start" id="gameStart" onclick="startGame()"><h3>Start Game</h3></button>
+        </div>
+    </div>
+    <div id="playArea">
+        <div class="container text-center d-flex flex-column text-center justify-content-center">
+            <h1 id="playTitle" class="m-5">Rock Paper Scissors</h1>
+            <div class="row"><!--Score-Board-->
+                <div class="col">
+                    <h4 id="player">Player</h4>
+                    <h3 id="playerScore" class="mb-4">0</h3>
+                </div>
+                <div class="col">
+                    <h4>Draw</h4>
+                    <h3 id="draw" class="mb-4">0</h3>
+                </div>
+                <div class="col">
+                    <h4>Computer</h4>
+                    <h3 id="botScore" class="mb-4">0</h3>
+                </div>
+            </div>
+            <div class="row mb-4"><!--Player & bot attack place-->
+                <div class="col"></div>
+                <div class="col d-flex flex-column align-items-center">
+                    <img id="playerMove" src="placeholder.png" height="200px" width="200">
+                    <h6 id="playerName2">Player</h6>
+                </div>
+                <div class="col">
+                    <img id="botMove" src="placeholder.png" height="200px" width="200">
+                    <h6>Computer</h6>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div>
+                <h4 id="message" class="mb-4">Make your move.</h4>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button id="rock" class="playerChoice" onclick="playerSelect('rock')">
+                        <img src="Rock.png" class="img-fluid">
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="paper" class="playerChoice" onclick="playerSelect('paper')">
+                        <img src="Paper.png" class="img-fluid">
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="scissors" class="playerChoice" onclick="playerSelect('scissors')">
+                        <img src="Scissors.png" class="img-fluid">
+                    </button>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button id="play" onclick="rockPaperScissors()"><h3>Play</h3></button>
+                <a href="rps.html"><button id="restart"><h3>Restart</h3></button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--bootstrap-js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
